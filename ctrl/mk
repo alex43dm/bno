@@ -1,0 +1,40 @@
+ifndef VER
+VER = 425
+endif
+ifndef REL
+REL = X
+endif
+
+.SUFFIXES:
+.SUFFIXES:		.o .c .a
+
+ifndef OPTIM
+OPTIM = -Otax
+endif
+ifndef DEBUG
+DEBUG = -g1
+endif
+
+OBJS = main.o async.o init.o tto.o
+
+LIBS = -l pcmcia
+NAME = Dev32.ser
+VNAME = $(NAME).$(VER)$(REL)
+
+BIN = Bin/$(VNAME)
+MAPF = Maps/$(VER)$(REL)
+
+CFLAGS =
+CFLAGS = -3 -ms -w9 $(OPTIM) $(DEBUG) -I ../../H
+VPATH = ../
+
+$(BIN):	$(OBJS) Makefile
+	cc -c $(CFLAGS) ../version.c -D NAME=\"$(NAME)\" -D VERSION=$(VER) -D RELEASE=\"$(REL)\"
+	cc -o $(BIN) "-Wl,OP MAP=$(MAPF)" -T 1 -b -N4096 "-Wl,op H=512" ../../32/devdrive.o $(CFLAGS) $(OBJS) version.o $(LIBS)
+	print "Version: $(VER)$(REL)" | cat ../Use - | usemsg $(BIN) -
+
+install:
+	beirut cp -v $(BIN) /bin/$(VNAME)
+
+clean:
+	rm -f *.o *.err $(BIN)

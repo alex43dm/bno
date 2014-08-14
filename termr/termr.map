@@ -1,0 +1,630 @@
+WATCOM Linker Version 10.6
+Copyright by WATCOM International Corp. 1985, 1996. All rights reserved.
+Created on:       02/02/01 14:05:13
+Executable Image: termr
+creating a QNX 386 executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          00012000             00008c20
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0000a000        00000006
+_TEXT                  CODE                          0000a010        00007334
+sprintf11_DATA         FAR_DATA                      00011344        00000000
+vsprintf11_DATA        FAR_DATA                      00011344        00000000
+efgfmt11_DATA          FAR_DATA                      00011344        00000000
+_NULL                  BEGDATA        DGROUP         00012000        00000020
+_AFTERNULL             BEGDATA        DGROUP         00012020        00000002
+CONST                  DATA           DGROUP         00012024        00000408
+CONST2                 DATA           DGROUP         00012430        0000021c
+_DATA                  DATA           DGROUP         0001264c        0000039c
+XIB                    DATA           DGROUP         000129e8        00000000
+XI                     DATA           DGROUP         000129e8        00000024
+XIE                    DATA           DGROUP         00012a0c        00000000
+YIB                    DATA           DGROUP         00012a0c        00000000
+YI                     DATA           DGROUP         00012a0c        0000000c
+YIE                    DATA           DGROUP         00012a18        00000000
+DATA                   DATA           DGROUP         00012a18        00000000
+DATA32                 DATA           DGROUP         00012a18        0000011c
+CONST32                CONST          DGROUP         00012b34        00000000
+_BSS                   BSS            DGROUP         00012b40        000000dc
+BSS32                  BSS            DGROUP         00012c1c        00000000
+STACK                  STACK          DGROUP         00012c20        00008000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+s = symbol is static
+
+Address        Symbol
+=======        ======
+
+Module: /home/root/project/termr/termr.o(/home/root/project/termr/termr.cpp)
+0000a010+      near CName::CName()
+0000a03d+      near CName::CName( char const near * )
+0000a0d5+      near CName::CName( char const near *, int )
+0000a178+      near CName::CName( char const near *, int, int )
+0000a21f+      void near CName::CloseFd()
+0000a25e+      void near CName::Init( char const near *, int )
+0000a2ef+      int near CName::link( char const near * )
+0000a34a+      void near CName::gr_begin()
+0000a382+      void near CName::gr_join( char const near * )
+0000a3c7+      void near CName::gr_kill( int )
+0000a3f6+      int near CName::sendsig( char const near *, int )
+0000a448+      near CName::~CName()
+0000a482+      near MEDIANA::MEDIANA()
+0000a4cd+      void near MEDIANA::MClear( int unsigned near & )
+0000a51e+      void near MEDIANA::MFilter( int unsigned near &, double )
+0000c1b0+      near CDisp::CDisp()
+0000c164+      void near CDisp::cmd( char )
+0000c114+      void near CDisp::ClearDisp()
+0000c0b0+      void near CDisp::clrscr()
+0000c028+      void near CDisp::clrhalf( int )
+0000bb7c+      void near CDisp::prusn( char const near *, int )
+0000bb3c+      void near CDisp::prusl( char const near *, int )
+0000bafc+      near CDisp::~CDisp()
+0000a6b1+      near MEDIANA::~MEDIANA()
+0000a6ea+      near CErr::CErr()
+0000a717+      near CErr::CErr( char const near * )
+0000a7b9+      int near CErr::init_net( char const near * )
+0000a85c+      int near CErr::net( char unsigned )
+0000a92f+      near CErr::~CErr()
+0000a96b+      near CLog::CLog()
+0000a9a9+      near CLog::CLog( char const near *, int )
+0000aa13+      void near CLog::init_log( char const near *, int )
+0000aa60+      void near CLog::info( char const near * )
+0000aa93+      void near CLog::warning( char const near *, char unsigned )
+0000aae9+      void near CLog::warning( char unsigned )
+0000ab3a+      void near CLog::error( char const near * )
+0000ab6d+      near CLog::~CLog()
+0000abb0+      near CLogg::CLogg( char const near *, int )
+0000bab8+      near Proxy::Proxy( int, int )
+0000ba24+      int near Proxy::InitProxy()
+0000b998+      int near Proxy::SendProxy( void near *, int )
+0000b968+      near Proxy::~Proxy()
+0000b938+      near CSQueue::CSQueue()
+0000b894+      int near CSQueue::Init( char const near *, int, int )
+0000b824+      int near CSQueue::ifgetmes( void near * )
+0000b7e0+      int near CSQueue::ifmes()
+0000b7a4+      near CSQueue::~CSQueue()
+0000b6b0+      near CShmem::CShmem( int )
+0000b664+      void near CShmem::SetBit( int, int unsigned )
+0000b60c+      void near CShmem::ShOnPower()
+0000b5b4+      void near CShmem::ShOffPower()
+0000b56c+      near CShmem::~CShmem()
+0000ac06+      void near CLogg::info( char const near * )
+0000ac39+      void near CLogg::warning( char const near *, char unsigned )
+0000ac81+      void near CLogg::warning( char unsigned )
+0000acc4+      void near CLogg::error( char const near * )
+0000acf7+      near CLogg::~CLogg()
+0000ad2a+      near TheApp::TheApp( char near * near * )
+0000ae6e+      int near TheApp::Run()
+0000af90+      void near TheApp::DistOnOff( int )
+0000b045+      int near TheApp::SendDat()
+0000b0af+      int near TheApp::OnIdle()
+0000b2d5+      int near TheApp::OnDisp()
+0000b43c+      near TheApp::~TheApp()
+0000b4ed       main_
+Module: /usr/lib/plib3r.lib(undefed)
+0000c2d0       __wcpp_2_undefed_cdtor__
+Module: /usr/lib/clib3r.lib(stkq32)
+0000c307*      __STK
+0000c30b       __CHK
+0000c304*      __GRO
+0000c32c*      __STKOVERFLOW_
+Module: /usr/lib/clib3r.lib(strcpy)
+0000c3a1       strcpy_
+Module: /usr/lib/clib3r.lib(qnx_name_attach)
+0000c3c0       qnx_name_attach_
+Module: /usr/lib/clib3r.lib(strlen)
+0000c3d9       strlen_
+Module: /usr/lib/clib3r.lib(qnx_name_locate)
+0000c3f2       qnx_name_locate_
+Module: /usr/lib/clib3r.lib(kill)
+0000c40b       kill_
+Module: /usr/lib/clib3r.lib(qnx_name_detach)
+0000c424       qnx_name_detach_
+Module: /usr/lib/clib3r.lib(setprio)
+0000c43d       setprio_
+Module: /usr/lib/clib3r.lib(setscheduler)
+0000c456       setscheduler_
+Module: /usr/lib/clib3r.lib(close)
+0000c46f       close_
+Module: /usr/lib/clib3r.lib(sleep)
+0000c488+      nanosleep_
+0000c535*      _lsleep_
+0000c535       sleep_
+0000c559*      delay_
+0001264c+      ___sleep_tid
+Module: /usr/lib/clib3r.lib(setpgid)
+0000c5b7       setpgid_
+Module: /usr/lib/clib3r.lib(calloc)
+0000c5d0       calloc_
+Module: /usr/lib/clib3r.lib(nfree)
+0000c5e8       _nfree_
+0000c5e8       free_
+00012b44+      ___MiniHeapFreeRover
+Module: /usr/lib/plib3r.lib(undefmbr)
+0000c678       __wcpp_2_undefined_member_function__
+Module: /usr/lib/clib3r.lib(shm_open)
+0000c68a       shm_open_
+Module: /usr/lib/clib3r.lib(perror)
+0000c6a3       perror_
+Module: /usr/lib/clib3r.lib(ummap)
+0000c719       mmap_
+Module: /usr/lib/clib3r.lib(open)
+0000c72e       open_
+Module: /usr/lib/clib3r.lib(fcntl)
+0000c747       fcntl_
+Module: /usr/lib/clib3r.lib(munmap)
+0000c760       munmap_
+Module: /usr/lib/mqueue3r.lib(/src/qnx4/Mqueue/stubs.c)
+0000c780       mq_open_
+0000ca3c       mq_send_
+0000cb34       mq_receive_
+0000cc40*      mq_notify_
+0000cd58       mq_getattr_
+0000ce4c*      mq_setattr_
+0000cf9c*      mq_unlink_
+0000d084       mq_close_
+Module: /usr/lib/clib3r.lib(syslog)
+0000d08a+      find_syslogd_
+0000d0c6       syslog_
+0000d0ee+      vsyslog_
+0000d3a1       openlog_
+0000d3d6       closelog_
+0000d3e0       setlogmask_
+00012650s      _LogStat
+00012654s      _LogTag
+00012658s      _LogFacility
+0001265cs      _LogMask
+00012660s      _syslogd_pid
+Module: /usr/lib/clib3r.lib(errno)
+0000d3f4       __get_errno_ptr_
+Module: /usr/lib/clib3r.lib(ltrunc)
+0000d40c       ltrunc_
+Module: /usr/lib/clib3r.lib(shm_unlink)
+0000d425       shm_unlink_
+Module: /usr/lib/math387r.lib(strtod)
+0000d43e       strtod_
+Module: /usr/lib/clib3r.lib(exit)
+0000d697s      _null_exit_rtn_
+0000d698       exit_
+0000d6b8*      _exit_
+00012664+      ___atexit
+Module: /usr/lib/clib3r.lib(sem)
+0000d6bd       sem_post_
+0000d6d1       sem_wait_
+0000d6e5*      sem_trywait_
+Module: /usr/lib/clib3r.lib(time)
+0000d6f9       time_
+Module: /usr/lib/clib3r.lib(outp)
+0000d712       outp_
+Module: /usr/lib/clib3r.lib(inp)
+0000d71c       inp_
+Module: /usr/lib/clib3r.lib(inpw)
+0000d724       inpw_
+Module: /usr/lib/clib3r.lib(sprintf)
+0000d72ds      mem_putc_
+0000d740       sprintf_
+Module: /usr/lib/clib3r.lib(kbhitqnx)
+0000d778       kbhit_
+Module: /usr/lib/clib3r.lib(getchqnx)
+0000d872       getch_
+Module: /usr/lib/clib3r.lib(cstrtq32)
+00012000*      __nullarea
+00012668       __slib_func
+0000d92c       _cstart_
+0000d9d2       __exit_
+Module: /usr/lib/clib3r.lib(fltused)
+00000000       _fltused_
+Module: /usr/lib/emu387.lib(386inite)
+0000da0d*      __fini_387_emulator
+0000da0c       __init_387_emulator
+Module: /usr/lib/clib3r.lib(_8087386)
+00012670       __8087
+00012671       __real87
+Module: /usr/lib/clib3r.lib(cmainqnx)
+0000da0es      __null_FPE_rtn_
+0000da0f*      _Not_Enough_Memory_
+0000da21s      _s_EFG_printf_
+0000da28       __CMain
+00012b50       __argc
+00012b54+      __argv
+00012b58*      ___env_mask
+00012b5c       __endheap
+00012b60       _environ
+Module: /usr/lib/plib3r.lib(fatalerr)
+0000daf0       __wcpp_2_fatal_runtime_error__
+Module: /usr/lib/clib3r.lib(xmsgqnx)
+0000db0d+      __exit_with_msg_
+0000db42       __fatal_runtime_error_
+Module: /usr/lib/clib3r.lib(mainqnx)
+00012674+      ___FirstThreadData
+00012678       ___GetThreadPtr
+0001267c       __AccessFileH
+00012680       __ReleaseFileH
+00012684*      __InitAccessH
+00012688       __FiniAccessH
+0001268c       __AccessIOB
+00012690       __ReleaseIOB
+00012694       __AccessNHeap
+00012698*      __AccessFHeap
+0000db5f*      __threadid_
+0000db69s      __SingleThread_
+0000db6es      __NullAccHeapRtn_
+0000db6es      __NullAccIOBRtn_
+0000db6es      __NullAccessRtn_
+0000db6es      __NullInitAccessRtn_
+0000db6f       __QNXInit_
+0001269c       __ReleaseNHeap
+000126a0*      __ReleaseFHeap
+Module: /usr/lib/clib3r.lib(__qnx_exit)
+0000dbaf       __qnx_exit_
+Module: /usr/lib/clib3r.lib(getpid)
+0000dbc8       getpid_
+Module: /usr/lib/clib3r.lib(timer_create)
+0000dbe1       timer_create_
+Module: /usr/lib/clib3r.lib(timer_settime)
+0000dbfa       timer_settime_
+Module: /usr/lib/clib3r.lib(nmalloc)
+0000dc13       _nmalloc_
+0000dc13       malloc_
+000126a4       ___nheapbeg
+000126a8       ___MiniHeapRover
+000126ac       ___LargestSizeB4MiniHeapRover
+Module: /usr/lib/clib3r.lib(set386)
+0000dd10       memset_
+Module: /usr/lib/clib3r.lib(memalloc)
+0000dd28       __MemAllocator
+0000ddd0       __MemFree
+Module: /usr/lib/clib3r.lib(heapmod)
+00012b64       ___nheap_clean
+00012b65*      ___fheap_clean
+Module: /usr/lib/clib3r.lib(strerror)
+0000dedb       strerror_
+00012b68+      _emsg
+Module: /usr/lib/clib3r.lib(iob)
+000126b0       ___iob
+00012890s      _force
+00012bac       ___ClosedStreams
+Module: /usr/lib/clib3r.lib(writev)
+0000df41       writev_
+Module: /usr/lib/clib3r.lib(crwd386)
+00012894*      __dynend
+00012898       __curbrk
+0001289c       __STACKLOW
+000128a0       __STACKTOP
+000128a4*      __ASTACKSIZ
+000128a8*      __ASTACKPTR
+000128ac       __cbyte
+000128b0*      __cbyte2
+000128b4*      __child
+000128ba*      __Envptr
+000128be*      __Envseg
+000128b8       __no87
+000128c0*      __FPE_handler
+000128c0       ___FPE_handler
+0000df5as      __null_FPE_rtn
+Module: /usr/lib/clib3r.lib(_mmap)
+0000df5b       _mmap_
+Module: /usr/lib/clib3r.lib(getenv)
+0000df74       getenv_
+0000df84+      _findenv_
+Module: /usr/lib/clib3r.lib(atoi)
+0000dfde       atoi_
+Module: /usr/lib/clib3r.lib(kererr)
+0000e04c       __kererr_
+Module: /usr/lib/clib3r.lib(unlink)
+0000e05a       unlink_
+Module: /usr/lib/clib3r.lib(kernel)
+0000e073       __send_
+0000e0cd       __sendfd_
+0000e121*      __receive_
+0000e155*      __reply_
+0000e189*      __creceive_
+0000e1bd*      __readmsg_
+0000e1f7*      __writemsg_
+Module: /usr/lib/clib3r.lib(qnx_strtonid)
+0000e22d       qnx_strtonid_
+Module: /usr/lib/clib3r.lib(asctime)
+0000e246s      convDec_
+0000e279+      _asctime_
+0000e366*      _ctime_
+0000e37f       ctime_
+0000e384*      asctime_
+00012bb0s      _result
+Module: /usr/lib/clib3r.lib(vsprintf)
+0000e391s      mem_putc_
+0000e3a4       vsprintf_
+Module: /usr/lib/clib3r.lib(qnx_vc_detach)
+0000e3c1       qnx_vc_detach_
+Module: /usr/lib/clib3r.lib(write)
+0000e3da       write_
+Module: /usr/lib/clib3r.lib(strcat)
+0000e3f3       strcat_
+Module: /usr/lib/clib3r.lib(strchr)
+0000e426       strchr_
+Module: /usr/lib/clib3r.lib(__getmagicvar)
+0000e43a       __getmagicvar_
+Module: /usr/lib/math387r.lib(scale)
+0000e453       _Scale_
+0000e494       _Scale10V_
+Module: /usr/lib/clib3r.lib(amodf386)
+0000e5b2*      __ModF
+0000e642       __ZBuf2F
+Module: /usr/lib/clib3r.lib(seterrno)
+0000e6de       __set_EDOM_
+0000e6e3       __set_errno_
+0000e6ef       __set_ERANGE_
+0000e6f6*      __set_EINVAL_
+Module: /usr/lib/clib3r.lib(hugeval)
+000124a0       __HugeValue
+Module: /usr/lib/clib3r.lib(inirt386)
+0000e706       __InitRtns
+0000e751       __FiniRtns
+Module: /usr/lib/clib3r.lib(__prtf)
+0000e7a0       __prtf_
+Module: /usr/lib/clib3r.lib(tcgetattr)
+0000e7b9       tcgetattr_
+Module: /usr/lib/clib3r.lib(tcsetattr)
+0000e7d2       tcsetattr_
+Module: /usr/lib/clib3r.lib(read)
+0000e7eb       read_
+Module: /usr/lib/clib3r.lib(segq32)
+0000e804       __QNXseg__
+Module: /usr/lib/clib3r.lib(setefg)
+0000e805       __setEFGfmt_
+Module: /usr/lib/clib3r.lib(chk8087)
+0000e820*      __init_8087_
+0000e82d*      _fpreset_
+0000e837       __chk8087_
+Module: /usr/lib/clib3r.lib(noefgfmt)
+0000e851s      _no_support_loaded_
+000128c4       ___EFG_printf
+000128c8       ___EFG_scanf
+Module: /usr/lib/clib3r.lib(__setmagicvar)
+0000e863       __setmagicvar_
+Module: /usr/lib/clib3r.lib(regdata)
+0000e87c*      __RegisterThreadDataSize_
+000128cc       ___ThreadDataSize
+Module: /usr/lib/clib3r.lib(amblksiz)
+000128d0       __amblksiz
+Module: /usr/lib/clib3r.lib(enterdb)
+0000e891       __EnterWVIDEO_
+000128d4+      ___WD_Present
+Module: /usr/lib/clib3r.lib(grownear)
+0000e8b7s      __LinkUpNewMHeap_
+0000e92b+      __LastFree_
+0000e955       __ExpandDGROUP_
+0000ea4bs      __AdjustAmount_
+Module: /usr/lib/clib3r.lib(nmemneed)
+0000ea91       __nmemneed_
+Module: /usr/lib/clib3r.lib(__stos)
+0000eaa0       __STOSB
+0000ead7*      __STOSD
+Module: /usr/lib/clib3r.lib(__strnerr)
+0000eb43       __strnerr_
+Module: /usr/lib/clib3r.lib(itoa)
+0000eb5cs      _Alphabet
+0000eb81+      utoa_
+0000ebcb       itoa_
+0000ebcb*      _itoa_
+Module: /usr/lib/clib3r.lib(stinit)
+00012bcc       ___OpenStreams
+Module: /usr/lib/clib3r.lib(strncmp)
+0000ebe6       strncmp_
+Module: /usr/lib/clib3r.lib(istable)
+000124a8       __IsTable
+Module: /usr/lib/clib3r.lib(localtim)
+0000ec0f       _localtime_
+0000ec60       localtime_
+00012bd0s      _The_time
+Module: /usr/lib/math387r.lib(i64ts386)
+0000ec6e       __CmpBigInt
+0000eca8       __Rnd2Int
+0000ed13       __Bin2String
+Module: /usr/lib/math387r.lib(fpow10)
+000125ac       __BigPow10Table
+Module: /usr/lib/clib3r.lib(chipvar)
+000128d8       ___chipbug
+000128d8       __chipbug
+Module: /usr/lib/clib3r.lib(chipd32)
+0000ef4b*      __fdiv_fpr
+0000f40d*      __fdiv_chk
+0000f420*      __fdiv_m32
+0000f46c       __fdiv_m64
+0000f4b8*      __fdiv_m32r
+0000f504*      __fdiv_m64r
+0000ee34s      fdiv_main_routine
+0000f3e7s      __fdivp_sti_st
+0000f3fas      __fdivrp_sti_st
+Module: /usr/lib/clib3r.lib(efgfmt)
+0000f550       _EFG_Format_
+0000f634s      forcedecpt_
+Module: /usr/lib/math387r.lib(cnvs2d)
+0000f693       __cnvs2d_
+Module: /usr/lib/clib3r.lib(8087cw)
+000128dc       __8087cw
+Module: /usr/lib/clib3r.lib(ini87386)
+0000f6a2       __init_80x87
+Module: /usr/lib/clib3r.lib(osinf386)
+00012bf4       ___87
+00012bf5       ___r87
+00012bf6       __osmajor
+00012bf7       __osminor
+Module: /usr/lib/clib3r.lib(heapen)
+0000f6ca*      _heapenable_
+000128e0       ___heap_enabled
+Module: /usr/lib/clib3r.lib(sbrk)
+0000f6eb*      sbrk_
+0000f6f1       __brk_
+0000f712*      brk_
+0000f77a*      __setcbrk_
+Module: /usr/lib/clib3r.lib(initfile)
+0000f780       __InitFiles_
+Module: /usr/lib/clib3r.lib(ioexit)
+0000f7f7       __full_io_exit_
+0000f803*      fcloseall_
+0000f808s      docloseall_
+Module: /usr/lib/clib3r.lib(tzset)
+000128e4       ___start_dst
+00012908       ___end_dst
+0001292c       _timezone
+00012930       ___dst_adjust
+00012934+      _daylight
+00012938s      _stzone
+00012957s      _dtzone
+00012976       _tzname
+0000f85b*      __CacheOSTZ_
+0000f8afs      tryOSTimeZone_
+0000f8c7       tzset_
+0000f8d5*      __parse_tz_
+0000f90cs      parse_time_
+0000f930s      parse_offset_
+0000fa59s      parse_rule_
+0001297es      _tzFlag
+Module: /usr/lib/clib3r.lib(gmtime)
+0000fc2b       __brktime_
+0000fd40+      _gmtime_
+0000fd5e*      gmtime_
+00012bf8s      _The_time
+Module: /usr/lib/clib3r.lib(timeutil)
+0000fd6b       __leapyear_
+0000fda6s      calc_yday_
+0000fe8bs      check_order_
+0000fecd       __isindst_
+00010190s      time_less_
+000125fc       ___diyr
+00012616       ___dilyr
+Module: /usr/lib/clib3r.lib(chipbug)
+000101c0       verify_pentium_fdiv_bug_
+00012a06s      ___anon42
+Module: /usr/lib/math387r.lib(ftos)
+00010215*      _SetMaxPrec_
+0001021bs      DoEFormat_
+000102bes      DoFFormat_
+00010321s      AdjField_
+00010392       _FtoS_
+00012984s      _MaxPrec
+Module: /usr/lib/clib3r.lib(detosinf)
+000105cc       __DetOSInfo_
+Module: /usr/lib/clib3r.lib(_brk)
+00010668       _brk_
+Module: /usr/lib/clib3r.lib(allocfp)
+00010681*      __allocfp_
+00010739+      __freefp_
+00010772       __purgefp_
+Module: /usr/lib/clib3r.lib(fclose)
+00010790*      fclose_
+000107cf       __shutdown_stream_
+000107e4+      __doclose_
+Module: /usr/lib/clib3r.lib(mktime)
+0001086d       mktime_
+Module: /usr/lib/math387r.lib(nan_inf)
+000109fc       __Nan_Inf_
+Module: /usr/lib/math387r.lib(log387)
+00010ad9*      log_
+00010af1*      log2_
+00010ae5*      log10_
+00010a8e*      IF@LOG
+00010a8e*      IF@DLOG
+00010ad1*      IF@LOG2
+00010ad1*      IF@DLOG2
+00010ad5*      IF@LOG10
+00010ad5       IF@DLOG10
+Module: /usr/lib/math387r.lib(floor)
+00010afd       floor_
+Module: /usr/lib/math387r.lib(fchop)
+00010b3a       __CHP
+Module: /usr/lib/math387r.lib(cvt)
+00010b57       __cvt_
+Module: /usr/lib/clib3r.lib(qnx_osinfo)
+00010d34       qnx_osinfo_
+Module: /usr/lib/clib3r.lib(flush)
+00010d4d       __flush_
+Module: /usr/lib/clib3r.lib(ftell)
+00010e0d       ftell_
+Module: /usr/lib/clib3r.lib(lseek)
+00010e5e       lseek_
+Module: /usr/lib/math387r.lib(log87e)
+00010e77       __log87_err_
+Module: /usr/lib/math387r.lib(modf387)
+00010eb4       modf_
+Module: /usr/lib/math387r.lib(frexp)
+00010ecd       frexp_
+Module: /usr/lib/clib3r.lib(qwritqnx)
+00010f3c       __qwrite_
+Module: /usr/lib/clib3r.lib(tellqnx)
+00010f84       tell_
+Module: /usr/lib/clib3r.lib(fflush)
+00010f95       fflush_
+Module: /usr/lib/math387r.lib(math2err)
+00010fa5       __math1err_
+00010faf+      __math2err_
+00012988s      _MathFuncNames
+Module: /usr/lib/clib3r.lib(flushall)
+0001108a       flushall_
+0001108f*      __flushall_
+Module: /usr/lib/math387r.lib(_matherr)
+000110ca*      _set_matherr_
+000110d0+      __rterrmsg_
+00011118       _matherr_
+00012630s      _Msgs
+000129e4+      __RWD_matherr
+Module: /usr/lib/math387r.lib(__mtherr)
+00011148       __matherr
+Module: /usr/lib/clib3r.lib(iobaddr)
+0001114d       __get_std_stream_
+Module: /usr/lib/clib3r.lib(fputs)
+00011167       fputs_
+Module: /usr/lib/clib3r.lib(fputc)
+000111f4       fputc_
+Module: /usr/lib/math387r.lib(matherr)
+00011282       matherr_
+Module: /usr/lib/clib3r.lib(ioalloc)
+00011285+      __ioalloc_
+Module: /usr/lib/clib3r.lib(chktty)
+000112fc+      __chktty_
+Module: /usr/lib/clib3r.lib(isatty)
+0001132b+      isatty_
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/usr/lib/clib3r.lib
+/usr/lib/mqueue3r.lib
+/usr/lib/plib3r.lib
+/usr/lib/math387r.lib
+/usr/lib/emu387.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  8000 (32768.)
+Memory size:  ff64 (65380.)
+Entry point address: 0000d92c
+Link time: 00:00.70

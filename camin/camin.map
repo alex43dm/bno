@@ -1,0 +1,1065 @@
+WATCOM Linker Version 10.6
+Copyright by WATCOM International Corp. 1985, 1996. All rights reserved.
+Created on:       02/01/29 13:04:17
+Executable Image: camin
+creating a QNX 386 executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          00018000             0000a7a0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0000a000        00000006
+_TEXT                  CODE                          0000a010        0000de0a
+printf11_DATA          FAR_DATA                      00017e1a        00000000
+sprintf11_DATA         FAR_DATA                      00017e1a        00000000
+vsprintf11_DATA        FAR_DATA                      00017e1a        00000000
+fprtf11_DATA           FAR_DATA                      00017e1a        00000000
+_NULL                  BEGDATA        DGROUP         00018000        00000020
+_AFTERNULL             BEGDATA        DGROUP         00018020        00000002
+CONST                  DATA           DGROUP         00018024        00000cc4
+CONST2                 DATA           DGROUP         00018cf0        00000450
+_DATA                  DATA           DGROUP         00019140        000013e4
+XIB                    DATA           DGROUP         0001a524        00000000
+XI                     DATA           DGROUP         0001a524        00000024
+XIE                    DATA           DGROUP         0001a548        00000000
+YIB                    DATA           DGROUP         0001a548        00000000
+YI                     DATA           DGROUP         0001a548        00000006
+YIE                    DATA           DGROUP         0001a54e        00000000
+DATA                   DATA           DGROUP         0001a54e        00000000
+DATA32                 DATA           DGROUP         0001a550        0000011c
+CONST32                CONST          DGROUP         0001a66c        00000000
+_BSS                   BSS            DGROUP         0001a670        00000130
+BSS32                  BSS            DGROUP         0001a7a0        00000000
+STACK                  STACK          DGROUP         0001a7a0        00008000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+s = symbol is static
+
+Address        Symbol
+=======        ======
+
+Module: /home/root/project/camin/camin.o(/home/root/project/camin/camin.cpp)
+0000a010+      near CName::CName()
+0000a03d+      near CName::CName( char const near * )
+0000a0d5+      near CName::CName( char const near *, int )
+0000a178+      near CName::CName( char const near *, int, int )
+0000a21f+      void near CName::CloseFd()
+0000a25e+      void near CName::Init( char const near *, int )
+0000a2ef+      int near CName::link( char const near * )
+0000a34a+      void near CName::gr_begin()
+0000df30+      near CDisp::CDisp()
+0000dee4+      void near CDisp::cmd( char )
+0000de94+      void near CDisp::ClearDisp()
+0000de30+      void near CDisp::clrscr()
+0000dda8+      void near CDisp::clrhalf( int )
+0000d8fc+      void near CDisp::prusn( char const near *, int )
+0000d8c4+      void near CDisp::prus( char const near * )
+0000d884+      void near CDisp::prusl( char const near *, int )
+0000d850+      void near CDisp::prus( char const near *, int )
+0000d7c0+      void near CDisp::printn( char const near *, int )
+0000d788+      void near CDisp::print( char const near * )
+0000d724+      int near CDisp::getkey()
+0000d664+      int near CDisp::Kbd( int near &, int const )
+0000d624+      near CDisp::~CDisp()
+0000a382+      void near CName::gr_join( char const near * )
+0000a3c7+      void near CName::gr_kill( int )
+0000a3f6+      int near CName::sendsig( char const near *, int )
+0000a448+      near CName::~CName()
+0000a482+      near CErr::CErr()
+0000a4af+      near CErr::CErr( char const near * )
+0000a51a+      int near CErr::init_net( char const near * )
+0000a586+      int near CErr::net( char unsigned )
+0000a60c+      near CErr::~CErr()
+0000a645+      near CLog::CLog()
+0000a683+      near CLog::CLog( char const near *, int )
+0000a6ed+      void near CLog::init_log( char const near *, int )
+0000a73a+      void near CLog::info( char const near * )
+0000a76d+      void near CLog::warning( char const near *, char unsigned )
+0000a7c3+      void near CLog::warning( char unsigned )
+0000a814+      void near CLog::error( char const near * )
+0000a847+      near CLog::~CLog()
+0000a88a+      near CLogg::CLogg( char const near *, int )
+0000a8e0+      void near CLogg::info( char const near * )
+0000a913+      void near CLogg::warning( char const near *, char unsigned )
+0000a95b+      void near CLogg::warning( char unsigned )
+0000a99e+      void near CLogg::error( char const near * )
+0000d5f4+      void near WCExcept::base_construct( WCExcept const near * )
+0000d5b4       near WCExcept::WCExcept()
+0000d558       near WCExcept::~WCExcept()
+0000d520+      near WCSLink::WCSLink()
+0000d4f0+      near WCSLink::~WCSLink()
+0000d4a4+      near WCDLink::WCDLink()
+0000d450+      near WCDLink::~WCDLink()
+0000d3f8+      near WCIsvListBase::WCIsvListBase()
+0000d3c0+      near CList::CList()
+0000d354+      near CList::CList( char near * )
+0000d30c+      near CList::CList( CList const near & )
+0000d2c4+      int near CList::operator ==( CList const near & ) const
+0000d25c+      CList near CList::operator <<( int const ) const
+0000d22c+      near CList::~CList()
+0000d1b4+      near <CList near >::WCNIsvDLink::WCNIsvDLink( CList const near & )
+0000d160+      near <CList near >::WCNIsvDLink::~WCNIsvDLink()
+0000d130+      void near * near <CList near >::WCNIsvDLink::operator new( int unsigned, void near * )
+0000d0e4+      void near <<CList near >::WCNIsvDLink near >::WCIsvDListBase::WCListDelete( WCSLink near * )
+0000d09c+      near <<CList near >::WCNIsvDLink near >::WCIsvDListBase::WCIsvDListBase()
+0000d040+      near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::WCValListBase( void near * (near *)( ), void (near *)())
+0000cfe4+      near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::WCValListBase()
+0000cfac+      int near <CList near >::WCValDList::base_equivalent( CList const near &, CList const near & ) const
+0000cf60+      near <CList near >::WCValDList::WCValDList()
+0000cef4+      near <CList near >::WCValDList::~WCValDList()
+0000cea0+      near <CList near >::WCValDList::WCValDList( <CList near >::WCValDList const near & )
+0000a9d1+      near CLogg::~CLogg()
+0000aa04+      int near TheApp::Line1()
+0000abe7+      int near TheApp::Line2()
+0000adca+      near TheApp::TheApp()
+0000af23+      int near TheApp::Run()
+0000afde+      near TheApp::~TheApp()
+0000b06c+      int near TheApp::SendCommand( char const near *, int )
+0000b0ff+      int near TheApp::TestVid( int )
+0000b4b8+      int near TheApp::JobMenu( int )
+0000b948+      int near TheApp::CtrlMenu( int )
+0000bce3+      int near TheApp::Config( int )
+0000be62+      int near TheApp::Login()
+0000c290+      void near TheApp::OnIdle()
+0000c3d5+      void near TheApp::SaveLog( int )
+0000c43a+      int near TheApp::Start()
+0000ce58+      near <<CList near >::WCNIsvDLink near >::WCIsvDListBase::~WCIsvDListBase()
+0000cdd4+      int near <<CList near >::WCNIsvDLink near >::WCIsvDListBase::insert( WCDLink near * )
+0000cd90+      int near <<CList near >::WCNIsvDLink near >::WCIsvDListBase::append( WCDLink near * )
+0000cd58+      WCDLink near * near <<CList near >::WCNIsvDLink near >::WCIsvDListBase::get( int )
+0000cd20+      WCDLink near * near <<CList near >::WCNIsvDLink near >::WCIsvDListBase::find( int ) const
+0000ccdc+      WCDLink near * near <<CList near >::WCNIsvDLink near >::WCIsvDListBase::findLast() const
+0000cc80+      void near <<CList near >::WCNIsvDLink near >::WCIsvDListBase::forAll( void (near *)(), void near * ) const
+0000cbf4+      <CList near >::WCNIsvDLink near * near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::WCListNew( CList const near & )
+0000cb9c+      void near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::WCListDelete( WCSLink near * )
+0000cb18+      void near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::base_construct( <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValLis
+0000cad8+      void near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::base_assign( <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBa
+0000ca74+      near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::~WCValListBase()
+0000ca18+      int near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::insert( CList const near & )
+0000c9bc+      int near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::append( CList const near & )
+0000c92c+      int near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::index( CList const near & ) const
+0000c8a8+      CList near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::get( int )
+0000c838+      CList near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::find( int ) const
+0000c7cc+      CList near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::findLast() const
+0000c764+      void near <CList near,<<CList near >::WCNIsvDLink near >::WCIsvDListBase near,<CList near >::WCNIsvDLink near >::WCValListBase::forAll( void (near *)(), void near * ) const
+0000c724+      CList near & near CList::operator =( CList const near & )
+0000c615+      void near BreakOnTimer( int )
+0000c649       main_
+0001a670s      int near LastCom
+0001a674s      int near Comand
+0001a678s      int near TimeOut
+0001a67cs      int near TestMode
+Module: /usr/lib/plib3r.lib(undefed)
+0000e074       __wcpp_2_undefed_cdtor__
+Module: /usr/lib/clib3r.lib(stkq32)
+0000e0ab*      __STK
+0000e0af       __CHK
+0000e0a8*      __GRO
+0000e0d0*      __STKOVERFLOW_
+Module: /usr/lib/clib3r.lib(strcpy)
+0000e145       strcpy_
+Module: /usr/lib/clib3r.lib(qnx_name_attach)
+0000e164       qnx_name_attach_
+Module: /usr/lib/clib3r.lib(strlen)
+0000e17d       strlen_
+Module: /usr/lib/clib3r.lib(qnx_name_locate)
+0000e196       qnx_name_locate_
+Module: /usr/lib/clib3r.lib(kill)
+0000e1af       kill_
+Module: /usr/lib/clib3r.lib(qnx_name_detach)
+0000e1c8       qnx_name_detach_
+Module: /usr/lib/clib3r.lib(setprio)
+0000e1e1       setprio_
+Module: /usr/lib/clib3r.lib(setscheduler)
+0000e1fa       setscheduler_
+Module: /usr/lib/clib3r.lib(close)
+0000e213       close_
+Module: /usr/lib/clib3r.lib(sleep)
+0000e22c+      nanosleep_
+0000e2d9*      _lsleep_
+0000e2d9       sleep_
+0000e2fd*      delay_
+00019140+      ___sleep_tid
+Module: /usr/lib/clib3r.lib(setpgid)
+0000e35b       setpgid_
+Module: /usr/lib/plib3r.lib(undefmbr)
+0000e374       __wcpp_2_undefined_member_function__
+Module: /usr/lib/clib3r.lib(shm_open)
+0000e386       shm_open_
+Module: /usr/lib/clib3r.lib(perror)
+0000e39f       perror_
+Module: /usr/lib/clib3r.lib(ummap)
+0000e415       mmap_
+Module: /usr/lib/clib3r.lib(open)
+0000e42a       open_
+Module: /usr/lib/clib3r.lib(fcntl)
+0000e443       fcntl_
+Module: /usr/lib/clib3r.lib(getchqnx)
+0000e45c       getch_
+Module: /usr/lib/clib3r.lib(munmap)
+0000e50f       munmap_
+Module: /usr/lib/mqueue3r.lib(/src/qnx4/Mqueue/stubs.c)
+0000e530       mq_open_
+0000e7ec       mq_send_
+0000e8e4*      mq_receive_
+0000e9f0*      mq_notify_
+0000eb08       mq_getattr_
+0000ebfc*      mq_setattr_
+0000ed4c*      mq_unlink_
+0000ee34       mq_close_
+Module: /usr/lib/clib3r.lib(syslog)
+0000ee3a+      find_syslogd_
+0000ee76       syslog_
+0000ee9e+      vsyslog_
+0000f151       openlog_
+0000f186       closelog_
+0000f190       setlogmask_
+00019144s      _LogStat
+00019148s      _LogTag
+0001914cs      _LogFacility
+00019150s      _LogMask
+00019154s      _syslogd_pid
+Module: /usr/lib/plib3r.lib(wcexcept)
+0000f1a4       void near WCIterExcept::base_throw_undef_iter() const
+0000f1a4*      void near WCIterExcept::base_throw_undef_item() const
+0000f1a4       void near WCIterExcept::base_throw_iter_range() const
+0000f1a4       void near WCExcept::base_throw_zero_buckets() const
+0000f1a4       void near WCExcept::base_throw_resize_required() const
+0000f1a4       void near WCExcept::base_throw_out_of_memory() const
+0000f1a4       void near WCExcept::base_throw_not_unique() const
+0000f1a4       void near WCExcept::base_throw_not_empty()
+0000f1a4       void near WCExcept::base_throw_index_range() const
+0000f1a4       void near WCExcept::base_throw_empty_container() const
+Module: /usr/lib/plib3r.lib(dtorarst)
+0000f1a8       __wcpp_2_dtor_array_store__
+Module: /usr/lib/plib3r.lib(opdelarr)
+0000f1c8       void near operator delete []( void near * )
+Module: /usr/lib/plib3r.lib(opdel)
+0000f1d0       void near operator delete( void near * )
+Module: /usr/lib/plib3r.lib(wclist)
+0000f1dc       WCSLink near * near WCIsvListBase::base_next( WCSLink const near *, int ) const
+0000f1f2       void near WCIsvListBase::base_insert( WCSLink near * )
+0000f214       int near WCIsvListBase::base_index_check( int ) const
+0000f24a       WCSLink near * near WCIsvListBase::base_bfind( int ) const
+0000f262       WCSLink near * near WCIsvListBase::base_sfind( int ) const
+0000f26e       WCDLink near * near WCIsvListBase::base_dfind( int ) const
+0000f2bb       WCSLink near * near WCIsvListBase::base_sget( int )
+0000f2eb       WCDLink near * near WCIsvListBase::base_dget( int )
+0000f329       int near WCIsvListBase::base_index( WCSLink const near * ) const
+0000f367       void near WCIsvListBase::base_clear()
+0000f376       void near WCIsvListBase::base_destroy()
+0000f3b7       near WCIsvListBase::~WCIsvListBase()
+0000f3d0*      WCSLink near * near WCListIterBase::base_advance( int )
+0000f45b*      WCDLink near * near WCListIterBase::base_retreat( int )
+0000f4eb*      WCSLink near * near WCListIterBase::base_tail_hit( WCSLink near * )
+0000f509*      void near WCListIterBase::base_tail_unhit( WCSLink near * )
+Module: /usr/lib/clib3r.lib(cmp386)
+0000f520       strcmp_
+Module: /usr/lib/plib3r.lib(vfun_err)
+0000f5c1       __wcpp_2_undef_vfun__
+Module: /usr/lib/clib3r.lib(pipe)
+0000f5e6       pipe_
+Module: /usr/lib/clib3r.lib(fork)
+0000f5ff       fork_
+Module: /usr/lib/clib3r.lib(sigset)
+0000f618       sigemptyset_
+0000f621*      sigfillset_
+0000f62a       sigaddset_
+0000f652*      sigdelset_
+0000f67c*      sigismember_
+Module: /usr/lib/clib3r.lib(iob)
+00019158       ___iob
+00019338s      _force
+0001a690       ___ClosedStreams
+Module: /usr/lib/clib3r.lib(dup2)
+0000f6a8       dup2_
+Module: /usr/lib/clib3r.lib(system)
+0000f6c1       system_
+Module: /usr/lib/clib3r.lib(exit)
+0000f7abs      _null_exit_rtn_
+0000f7ac       exit_
+0000f7cc*      _exit_
+0001933c+      ___atexit
+Module: /usr/lib/clib3r.lib(signal)
+0000f7d1       signal_
+Module: /usr/lib/clib3r.lib(read)
+0000f807       read_
+Module: /usr/lib/clib3r.lib(strstr)
+0000f820       strstr_
+Module: /usr/lib/clib3r.lib(printf)
+0000f8de       printf_
+Module: /usr/lib/clib3r.lib(atoi)
+0000f900       atoi_
+Module: /usr/lib/clib3r.lib(sprintf)
+0000f96ds      mem_putc_
+0000f980       sprintf_
+Module: /usr/lib/clib3r.lib(wait)
+0000f9b8       wait_
+Module: /usr/lib/plib3r.lib(fstconnm)
+0000f9d4       near fstream::fstream( char const near *, int, int )
+Module: /usr/lib/plib3r.lib(istexpch)
+0000fa6c       istream near & near istream::operator >>( char near * )
+Module: /usr/lib/clib3r.lib(sem_init)
+0000fb5e       sem_init_
+Module: /usr/lib/plib3r.lib(fstdestr)
+0000fb78       near fstream::~fstream()
+Module: /usr/lib/plib3r.lib(flfoprot)
+00018e0c       int const near filebuf::openprot
+Module: /usr/lib/plib3r.lib(fsbconnm)
+0000fc08       near fstreambase::fstreambase( char const near *, int, int )
+Module: /usr/lib/plib3r.lib(fsbopen)
+0000fc94       void near fstreambase::open( char const near *, int, int )
+Module: /usr/lib/plib3r.lib(ostopfx)
+0000fce0       int near ostream::do_opfx()
+Module: /usr/lib/plib3r.lib(iofoutfl)
+0000fd34       ostream near & near ostream::__outfloat( long double const near & )
+Module: /usr/lib/plib3r.lib(ostflush)
+0000fe08       ostream near & near ostream::flush()
+Module: /usr/lib/plib3r.lib(ostwrite)
+0000fe4c       ostream near & near ostream::write( char const near *, int )
+Module: /usr/lib/plib3r.lib(ostput)
+0000ff30       ostream near & near ostream::put( char )
+Module: /usr/lib/plib3r.lib(ostincch)
+0000ffd0       ostream near & near ostream::operator <<( char const near * )
+Module: /usr/lib/plib3r.lib(ostinulo)
+00010064       ostream near & near ostream::operator <<( long unsigned )
+Module: /usr/lib/plib3r.lib(ostinslo)
+0001018c       ostream near & near ostream::operator <<( long )
+Module: /usr/lib/plib3r.lib(ostincha)
+00010280       ostream near & near ostream::operator <<( char )
+Module: /usr/lib/plib3r.lib(iossetst)
+00010338       void near ios::setstate( int )
+Module: /usr/lib/plib3r.lib(iosinit)
+00010354       void near ios::init( streambuf near * )
+Module: /usr/lib/plib3r.lib(iosconde)
+000103a0       near ios::ios()
+Module: /usr/lib/plib3r.lib(iosclear)
+000103a8       int near ios::clear( int )
+Module: /usr/lib/plib3r.lib(undefdta)
+00000000       ____wcpp_2_data_undefined_member_data_
+Module: /usr/lib/plib3r.lib(istdipfx)
+000103bc       int near istream::do_ipfx( int )
+Module: /usr/lib/plib3r.lib(istread)
+00010444       istream near & near istream::read( char near *, int )
+Module: /usr/lib/plib3r.lib(istgline)
+000104ec       istream near & near istream::getline( char near *, int, char )
+Module: /usr/lib/plib3r.lib(istgch)
+00010514       istream near & near istream::get( char near & )
+Module: /usr/lib/plib3r.lib(istgpch)
+0001059c       istream near & near istream::get( char near *, int, char )
+Module: /usr/lib/plib3r.lib(istipfx)
+000105c4       int near istream::ipfx( int )
+Module: /usr/lib/plib3r.lib(istexcha)
+00010614       istream near & near istream::operator >>( char near & )
+Module: /usr/lib/plib3r.lib(iotconde)
+000106a8       near iostream::iostream()
+Module: /usr/lib/plib3r.lib(fstconde)
+00010724       near fstream::fstream()
+Module: /usr/lib/clib3r.lib(sem)
+00010792       sem_post_
+000107a6       sem_wait_
+000107ba*      sem_trywait_
+Module: /usr/lib/clib3r.lib(strncpy)
+000107ce       strncpy_
+Module: /usr/lib/clib3r.lib(itoa)
+000107f3s      _Alphabet
+00010818+      utoa_
+00010862       itoa_
+00010862*      _itoa_
+Module: /usr/lib/clib3r.lib(strcat)
+0001087d       strcat_
+Module: /usr/lib/clib3r.lib(opendir)
+000108b0       opendir_
+000108ec       closedir_
+Module: /usr/lib/clib3r.lib(readdir)
+00010904       readdir_
+Module: /usr/lib/clib3r.lib(fopen)
+0001091d+      __open_flags_
+000109b2s      __doopen_
+00010a5f+      _fsopen_
+00010a98       fopen_
+00010aa2s      close_file_
+00010b1c*      freopen_
+Module: /usr/lib/clib3r.lib(fscanf)
+00010b73s      cget_file_
+00010b8fs      uncget_file_
+00010b97+      vfscanf_
+00010bd8       fscanf_
+Module: /usr/lib/clib3r.lib(fputs)
+00010bf9       fputs_
+Module: /usr/lib/clib3r.lib(fclose)
+00010c86       fclose_
+00010cc5       __shutdown_stream_
+00010cda       __doclose_
+Module: /usr/lib/clib3r.lib(alarm)
+00010d63       alarm_
+Module: /usr/lib/clib3r.lib(strncmp)
+00010d7c       strncmp_
+Module: /usr/lib/clib3r.lib(getenv)
+00010da5       getenv_
+00010db5+      _findenv_
+Module: /usr/lib/clib3r.lib(lseek)
+00010e0f       lseek_
+Module: /usr/lib/clib3r.lib(write)
+00010e28       write_
+Module: /usr/lib/clib3r.lib(sigact)
+00010e41       sigaction_
+Module: /usr/lib/plib3r.lib(opnewarr)
+00010e5c       void near * near operator new []( int unsigned )
+Module: /usr/lib/plib3r.lib(pure_err)
+00010e61       __wcpp_2_pure_error__
+Module: /usr/lib/clib3r.lib(cstrtq32)
+00018000*      __nullarea
+00019340       __slib_func
+00010e8c       _cstart_
+00010f32       __exit_
+Module: /usr/lib/clib3r.lib(cmainqnx)
+00010f6bs      __null_FPE_rtn_
+00010f6c*      _Not_Enough_Memory_
+00010f7es      _s_EFG_printf_
+00010f85       __CMain
+0001a694       __argc
+0001a698+      __argv
+0001a69c*      ___env_mask
+0001a6a0       __endheap
+0001a6a4       _environ
+Module: /usr/lib/plib3r.lib(fatalerr)
+0001104c       __wcpp_2_fatal_runtime_error__
+Module: /usr/lib/clib3r.lib(xmsgqnx)
+00011069+      __exit_with_msg_
+0001109e       __fatal_runtime_error_
+Module: /usr/lib/clib3r.lib(mainqnx)
+00019348+      ___FirstThreadData
+0001934c       ___GetThreadPtr
+00019350       __AccessFileH
+00019354       __ReleaseFileH
+00019358*      __InitAccessH
+0001935c       __FiniAccessH
+00019360       __AccessIOB
+00019364       __ReleaseIOB
+00019368       __AccessNHeap
+0001936c*      __AccessFHeap
+000110bb*      __threadid_
+000110c5s      __SingleThread_
+000110cas      __NullAccHeapRtn_
+000110cas      __NullAccIOBRtn_
+000110cas      __NullAccessRtn_
+000110cas      __NullInitAccessRtn_
+000110cb       __QNXInit_
+00019370       __ReleaseNHeap
+00019374*      __ReleaseFHeap
+Module: /usr/lib/clib3r.lib(__qnx_exit)
+0001110b       __qnx_exit_
+Module: /usr/lib/clib3r.lib(getpid)
+00011124       getpid_
+Module: /usr/lib/clib3r.lib(timer_create)
+0001113d       timer_create_
+Module: /usr/lib/clib3r.lib(timer_settime)
+00011156       timer_settime_
+Module: /usr/lib/clib3r.lib(errno)
+0001116f       __get_errno_ptr_
+Module: /usr/lib/clib3r.lib(strerror)
+00011187       strerror_
+0001a6a8+      _emsg
+Module: /usr/lib/clib3r.lib(writev)
+000111ed       writev_
+Module: /usr/lib/clib3r.lib(crwd386)
+00019378*      __dynend
+0001937c       __curbrk
+00019380       __STACKLOW
+00019384       __STACKTOP
+00019388*      __ASTACKSIZ
+0001938c*      __ASTACKPTR
+00019390       __cbyte
+00019394*      __cbyte2
+00019398*      __child
+0001939e*      __Envptr
+000193a2*      __Envseg
+0001939c       __no87
+000193a4*      __FPE_handler
+000193a4       ___FPE_handler
+00011206s      __null_FPE_rtn
+Module: /usr/lib/clib3r.lib(_mmap)
+00011207       _mmap_
+Module: /usr/lib/clib3r.lib(tcgetattr)
+00011220       tcgetattr_
+Module: /usr/lib/clib3r.lib(tcsetattr)
+00011239       tcsetattr_
+Module: /usr/lib/clib3r.lib(kererr)
+00011252       __kererr_
+Module: /usr/lib/clib3r.lib(unlink)
+00011260       unlink_
+Module: /usr/lib/clib3r.lib(kernel)
+00011279       __send_
+000112d3       __sendfd_
+00011327*      __receive_
+0001135b*      __reply_
+0001138f*      __creceive_
+000113c3*      __readmsg_
+000113fd*      __writemsg_
+Module: /usr/lib/clib3r.lib(set386)
+00011440       memset_
+Module: /usr/lib/clib3r.lib(qnx_strtonid)
+00011458       qnx_strtonid_
+Module: /usr/lib/clib3r.lib(time)
+00011471       time_
+Module: /usr/lib/clib3r.lib(asctime)
+0001148as      convDec_
+000114bd+      _asctime_
+000115aa*      _ctime_
+000115c3       ctime_
+000115c8*      asctime_
+0001a6ecs      _result
+Module: /usr/lib/clib3r.lib(vsprintf)
+000115d5s      mem_putc_
+000115e8       vsprintf_
+Module: /usr/lib/clib3r.lib(qnx_vc_detach)
+00011605       qnx_vc_detach_
+Module: /usr/lib/clib3r.lib(strchr)
+0001161e       strchr_
+Module: /usr/lib/plib3r.lib(stabadt)
+00011634       __wcpp_2_dtor_array__
+Module: /usr/lib/clib3r.lib(nfree)
+00011661       _nfree_
+00011661       free_
+0001a708+      ___MiniHeapFreeRover
+Module: /usr/lib/plib3r.lib(prwdata)
+000193a8       __wint_pure_error_flag
+000193aa       __wint_undef_vfun_flag
+000193ac*      __wint_module_init
+Module: /usr/lib/clib3r.lib(stinit)
+0001a70c       ___OpenStreams
+Module: /usr/lib/clib3r.lib(sigprocmask)
+000116f0       sigprocmask_
+Module: /usr/lib/clib3r.lib(basename)
+00011709       basename_
+Module: /usr/lib/clib3r.lib(splpqnx)
+00011722       spawnlp_
+Module: /usr/lib/clib3r.lib(inirt386)
+00011740       __InitRtns
+0001178b       __FiniRtns
+Module: /usr/lib/clib3r.lib(fprtf)
+000117das      file_putc_
+000117eb       __fprtf_
+Module: /usr/lib/clib3r.lib(istable)
+00018e7c       __IsTable
+Module: /usr/lib/clib3r.lib(__prtf)
+0001187a       __prtf_
+Module: /usr/lib/plib3r.lib(iotdestr)
+00011894       near iostream::~iostream()
+Module: /usr/lib/plib3r.lib(fsbdestr)
+0001191c       near fstreambase::~fstreambase()
+Module: /usr/lib/plib3r.lib(iosdestr)
+00011990       near ios::~ios()
+Module: /usr/lib/clib3r.lib(iobaddr)
+000119c7       __get_std_stream_
+Module: /usr/lib/clib3r.lib(flush)
+000119e1       __flush_
+Module: /usr/lib/plib3r.lib(iofldfst)
+00011aa4       void near __LDFloatToString( char near *, double const near *, int, long )
+Module: /usr/lib/plib3r.lib(iouwrtit)
+00011b50       int near __WATCOM_ios::writeitem( ostream near &, char const near *, int, int )
+Module: /usr/lib/plib3r.lib(ioufgtba)
+00011e9c       int near __FlagsToBase( long )
+Module: /usr/lib/plib3r.lib(ostadpre)
+00011ec0       void near __AddPrefix( char, char near *, int near &, int, long )
+Module: /usr/lib/clib3r.lib(ltoa)
+00011f0bs      _Alphabet
+00011f30       ultoa_
+00011f7a       ltoa_
+00011f7a*      _ltoa_
+Module: /usr/lib/clib3r.lib(strupr)
+00011f95       strupr_
+00011f95*      _strupr_
+Module: /usr/lib/plib3r.lib(iosfail)
+00011fbc       near ios::failure::failure( int )
+Module: /usr/lib/plib3r.lib(manws)
+00012044+      istream near & near operator >>( istream near &, <long near >::smanip const near & )
+0001202c+      istream near & near operator >>( istream near &, <int near >::smanip const near & )
+00012014+      ostream near & near operator <<( ostream near &, <long near >::smanip const near & )
+00011ffc+      ostream near & near operator <<( ostream near &, <int near >::smanip const near & )
+00011fc0       istream near & near ws( istream near & )
+Module: /usr/lib/plib3r.lib(istgalin)
+0001205c       int near __getaline( istream near &, char near *, int, char, int, int near & )
+Module: /usr/lib/clib3r.lib(nmalloc)
+0001214b       _nmalloc_
+0001214b       malloc_
+000193b0       ___nheapbeg
+000193b4       ___MiniHeapRover
+000193b8       ___LargestSizeB4MiniHeapRover
+Module: /usr/lib/clib3r.lib(__opendir)
+0001223a       __opendir_
+Module: /usr/lib/clib3r.lib(__closedir)
+00012253       __closedir_
+Module: /usr/lib/clib3r.lib(tolower)
+0001226c       tolower_
+0001226c*      _tolower_
+Module: /usr/lib/clib3r.lib(seterrno)
+0001227a       __set_EDOM_
+0001227f       __set_errno_
+0001228b       __set_ERANGE_
+00012292*      __set_EINVAL_
+Module: /usr/lib/clib3r.lib(sopen)
+000122a2       sopen_
+Module: /usr/lib/clib3r.lib(allocfp)
+000122bb       __allocfp_
+00012373       __freefp_
+000123ac       __purgefp_
+Module: /usr/lib/clib3r.lib(fseek)
+000123cas      __update_buffer_
+00012401s      __reset_buffer_
+00012419       fseek_
+Module: /usr/lib/clib3r.lib(chktty)
+0001252d       __chktty_
+Module: /usr/lib/clib3r.lib(fgetc)
+0001255c       fgetc_
+000125b5+      __filbuf_
+000125e4+      __fill_buffer_
+Module: /usr/lib/clib3r.lib(ungetc)
+0001265a       ungetc_
+Module: /usr/lib/clib3r.lib(scnf)
+000126f5s      cget_
+000126fcs      uncget_
+00012704       __scnf_
+0001294bs      get_opt_
+00012a40s      scan_white_
+00012a7fs      scan_char_
+00012b14s      scan_string_
+00012c37s      report_scan_
+00012c95s      makelist_
+00012cd8s      scan_arb_
+00012dd2s      scan_float_
+000130e9s      scan_int_
+000132d9s      radix_value_
+00013300s      cgetw_
+00018fbcs      _lst_mask
+Module: /usr/lib/clib3r.lib(ioalloc)
+00013326       __ioalloc_
+Module: /usr/lib/clib3r.lib(fputc)
+0001339d       fputc_
+Module: /usr/lib/clib3r.lib(ftell)
+0001342b       ftell_
+Module: /usr/lib/clib3r.lib(sigstub)
+0001347c       __sigstub_
+0001347c*      __sigstub
+Module: /usr/lib/clib3r.lib(__sigaction)
+00013496       __sigaction_
+Module: /usr/lib/plib3r.lib(opnew)
+000134b0       void near * near operator new( int unsigned )
+Module: /usr/lib/clib3r.lib(segq32)
+000134fc       __QNXseg__
+Module: /usr/lib/clib3r.lib(noefgfmt)
+000134fds      _no_support_loaded_
+000193bc       ___EFG_printf
+000193c0       ___EFG_scanf
+Module: /usr/lib/clib3r.lib(__setmagicvar)
+0001350f       __setmagicvar_
+Module: /usr/lib/clib3r.lib(regdata)
+00013528*      __RegisterThreadDataSize_
+000193c4       ___ThreadDataSize
+Module: /usr/lib/clib3r.lib(amblksiz)
+000193c8       __amblksiz
+Module: /usr/lib/clib3r.lib(enterdb)
+0001353d       __EnterWVIDEO_
+000193cc+      ___WD_Present
+Module: /usr/lib/clib3r.lib(__getmagicvar)
+00013563       __getmagicvar_
+Module: /usr/lib/clib3r.lib(__strnerr)
+0001357c       __strnerr_
+Module: /usr/lib/clib3r.lib(__stos)
+000135a0       __STOSB
+000135d7*      __STOSD
+Module: /usr/lib/clib3r.lib(localtim)
+00013643       _localtime_
+00013694       localtime_
+0001a710s      _The_time
+Module: /usr/lib/plib3r.lib(stabarr)
+000136a4s      __7a4u3RO_STATE near * near arr_state_table( ro_dtreg near * )
+000136a8s      void near * near arr_point_object( rw_dtreg near *, int unsigned )
+000136c1s      void near arr_init_traverse( __1j2o3bSTAB_TRAVERSE near *, rw_dtreg near * )
+000136c6s      void near init()
+000136d1       __wcpp_2_arr_register__
+000193d0s      __6rq0qbDTREG_VFTBL near arr_vftable
+0001a52a*      rt_init __based("XI") __wcpp_2_data_stab_init_arr_
+Module: /usr/lib/plib3r.lib(stabdtor)
+00013704s      __7a4u3RO_STATE near * near nextDtorPosn( __1j2o3bSTAB_TRAVERSE near * )
+0001374es      void near dtorComponent( __iaap9DTOR_CMD near *, int unsigned, rw_dtreg near *, int unsigned )
+00013798s      void near destruct_traverse( int unsigned, rw_dtreg near *, int )
+000138c8       __wcpp_2_destruct_internal__
+000138d2*      __wcpp_2_destruct_all__
+000138d4*      __wcpp_2_destruct__
+000138e6*      __wcpp_2_destruct_after_all__
+000138e8*      __wcpp_2_destruct_after__
+Module: /usr/lib/clib3r.lib(memalloc)
+000138f8       __MemAllocator
+000139a0       __MemFree
+Module: /usr/lib/clib3r.lib(heapmod)
+0001a734       ___nheap_clean
+0001a735*      ___fheap_clean
+Module: /usr/lib/clib3r.lib(initfile)
+00013aab       __InitFiles_
+Module: /usr/lib/clib3r.lib(ioexit)
+00013b22       __full_io_exit_
+00013b2e*      fcloseall_
+00013b33s      docloseall_
+Module: /usr/lib/clib3r.lib(spvpeqnx)
+00013b86       spawnvpe_
+0001a738s      ___last_path
+Module: /usr/lib/plib3r.lib(ostdestr)
+00013cc0       near ostream::~ostream()
+Module: /usr/lib/plib3r.lib(istdestr)
+00013d2c       near istream::~istream()
+Module: /usr/lib/plib3r.lib(flfdestr)
+00013d98       near filebuf::~filebuf()
+Module: /usr/lib/plib3r.lib(ioufrxal)
+00013e00       void near __WATCOM_ios::free_xalloc_storage( ios near * )
+Module: /usr/lib/clib3r.lib(qwritqnx)
+00013e15       __qwrite_
+Module: /usr/lib/math387r.lib(ftos)
+00013e5d*      _SetMaxPrec_
+00013e63s      DoEFormat_
+00013f06s      DoFFormat_
+00013f69s      AdjField_
+00013fda       _FtoS_
+000193dcs      _MaxPrec
+Module: /usr/lib/plib3r.lib(iofforce)
+00014214       void near __forcedecpt( char near *, int, char )
+Module: /usr/lib/clib3r.lib(grownear)
+00014259s      __LinkUpNewMHeap_
+000142cd+      __LastFree_
+000142f7       __ExpandDGROUP_
+000143eds      __AdjustAmount_
+Module: /usr/lib/clib3r.lib(nmemneed)
+00014433       __nmemneed_
+Module: /usr/lib/clib3r.lib(tellqnx)
+00014436       tell_
+Module: /usr/lib/clib3r.lib(isatty)
+00014447       isatty_
+Module: /usr/lib/clib3r.lib(flushall)
+00014460+      flushall_
+00014465       __flushall_
+Module: /usr/lib/clib3r.lib(qreadqnx)
+000144a0       __qread_
+Module: /usr/lib/clib3r.lib(fdfs386)
+000144e8       __FDFS
+Module: /usr/lib/clib3r.lib(fflush)
+00014534       fflush_
+Module: /usr/lib/plib3r.lib(cppdata)
+0001a73c       __wint_thread_data
+0001a75c*      ___wcpp_2_data_catch_completed_
+0001a760       ___wcpp_2_data_dtreg_vfptrs_
+0001a774*      __compiled_under_generic
+Module: /usr/lib/clib3r.lib(tzset)
+000193e0       ___start_dst
+00019404       ___end_dst
+00019428       _timezone
+0001942c       ___dst_adjust
+00019430+      _daylight
+00019434s      _stzone
+00019453s      _dtzone
+00019472       _tzname
+00014544*      __CacheOSTZ_
+00014598s      tryOSTimeZone_
+000145b0       tzset_
+000145be*      __parse_tz_
+000145f5s      parse_time_
+00014619s      parse_offset_
+00014742s      parse_rule_
+0001947as      _tzFlag
+Module: /usr/lib/clib3r.lib(gmtime)
+00014914       __brktime_
+00014a29+      _gmtime_
+00014a47*      gmtime_
+0001a778s      _The_time
+Module: /usr/lib/clib3r.lib(timeutil)
+00014a54       __leapyear_
+00014a8fs      calc_yday_
+00014b74s      check_order_
+00014bb6       __isindst_
+00014e79s      time_less_
+0001903c       ___diyr
+00019056       ___dilyr
+Module: /usr/lib/plib3r.lib(tssize)
+00014ed0       __wcpp_2_ts_size__
+Module: /usr/lib/plib3r.lib(stabreg)
+00014f14       __wcpp_2_base_register__
+00014f2d*      __wcpp_2_base_deregister__
+Module: /usr/lib/plib3r.lib(stabtrav)
+00014f3c       __wcpp_2_stab_entry__
+00014f6a       __wcpp_2_stab_trav_init__
+00014f8b       __wcpp_2_stab_trav_comp__
+00014f90       __wcpp_2_stab_trav_next__
+00015015       __wcpp_2_stab_trav_move__
+Module: /usr/lib/plib3r.lib(stabthrw)
+000150a8s      void near callTerminate( thread_ctl near * )
+000150bf       __wcpp_2_corrupted_stack__
+000150d0s      int unsigned near typesigIndex( dispatch_exc near *, int unsigned, rt_type_sig near * near * )
+0001516cs      int near dispatchableFnExc( dispatch_exc near *, __iaap9DTOR_CMD near * )
+00015193s      void near fneDispatch( dispatch_exc near * )
+000151a9s      int near dispatchableCatch( dispatch_exc near *, __iaap9DTOR_CMD near * )
+000151cfs      rt_type_sig near * near throwCnvSig( dispatch_exc near * )
+000151dds      int near excToBePopped( thread_ctl near * )
+00015280s      void near catchDispatch( dispatch_exc near * )
+000153c4s      void near catchDone( thread_ctl near *, active_exc near * )
+00015401*      __wcpp_2_catch_done__
+00015422s      void near unwindExc( dispatch_exc near * )
+00015447s      void near unwindStack( dispatch_exc near * )
+0001549ds      __anonymous_enum near dispatchable( dispatch_exc near *, rw_dtreg near * )
+000155a0s      active_exc near * near getActiveExc( thread_ctl near * )
+00015624s      void near dispatch_init( dispatch_exc near *, throw_ro near *, int )
+0001565d+      __wcpp_2_dispatchable__
+000156b6+      __wcpp_2_save_exc__
+00015734+      __wcpp_2_dispatch__
+000157ebs      void near processThrow( void near *, throw_ro near *, int )
+00015832*      __wcpp_2_rethrow__
+00015842*      __wcpp_2_throw__
+0001584c*      __wcpp_2_throw_zero__
+00015854s      void near longjmpExcPop( dispatch_exc near *, rw_dtreg near * )
+0001589fs      void near longjmpDtoring( void far * )
+0001593fs      void near longjmpInit()
+0001a530+      ___wcpp_2_data_init_longjmp_
+Module: /usr/lib/clib3r.lib(spveqnx)
+0001594a       spawnve_
+00019480+      ___p_overlay
+Module: /usr/lib/plib3r.lib(flfpbfai)
+00015a40       int near filebuf::pbackfail( int )
+Module: /usr/lib/plib3r.lib(flfoverf)
+00015b04       int near filebuf::overflow( int )
+Module: /usr/lib/plib3r.lib(flfundrf)
+00015ca0       int near filebuf::underflow()
+Module: /usr/lib/plib3r.lib(flfsetbf)
+00015d84       streambuf near * near filebuf::setbuf( char near *, int )
+Module: /usr/lib/plib3r.lib(flfseeko)
+00015dd4       long near filebuf::seekoff( long, int, int )
+Module: /usr/lib/plib3r.lib(stfseekp)
+00015e2c       long near streambuf::seekpos( long, int )
+Module: /usr/lib/plib3r.lib(flfsync)
+00015e3c       int near filebuf::sync()
+Module: /usr/lib/plib3r.lib(stfdoall)
+00015ed4       int near streambuf::doallocate()
+Module: /usr/lib/plib3r.lib(stfdestr)
+00015f10       near streambuf::~streambuf()
+Module: /usr/lib/clib3r.lib(liballoc)
+00015f2c       _plib_malloc_
+00015f31       _plib_free_
+Module: /usr/lib/math387r.lib(nan_inf)
+00015f36       __Nan_Inf_
+Module: /usr/lib/math387r.lib(log387)
+00016013*      log_
+0001602b*      log2_
+0001601f*      log10_
+00015fc8*      IF@LOG
+00015fc8*      IF@DLOG
+0001600b*      IF@LOG2
+0001600b*      IF@DLOG2
+0001600f*      IF@LOG10
+0001600f       IF@DLOG10
+Module: /usr/lib/math387r.lib(floor)
+00016037       floor_
+Module: /usr/lib/math387r.lib(fchop)
+00016074       __CHP
+Module: /usr/lib/math387r.lib(scale)
+00016091+      _Scale_
+000160d2       _Scale10V_
+Module: /usr/lib/math387r.lib(cvt)
+000161ef       __cvt_
+Module: /usr/lib/clib3r.lib(_8087386)
+00019484       __8087
+00019485       __real87
+Module: /usr/lib/clib3r.lib(heapen)
+000163cc*      _heapenable_
+00019488       ___heap_enabled
+Module: /usr/lib/clib3r.lib(sbrk)
+000163ed*      sbrk_
+000163f3       __brk_
+00016414*      brk_
+0001647c*      __setcbrk_
+Module: /usr/lib/clib3r.lib(mktime)
+00016482       mktime_
+Module: /usr/lib/plib3r.lib(bittest)
+00016614       __wcpp_2_bit_test__
+0001948cs      char unsigned near mask[]
+Module: /usr/lib/plib3r.lib(callterm)
+00016634       __wcpp_2_call_terminate__
+Module: /usr/lib/plib3r.lib(tsequiv)
+0001663cs      rt_type_sig near * near catBaseSig( rt_type_sig near * )
+00016645       __wcpp_2_ts_equiv__
+Module: /usr/lib/plib3r.lib(callunex)
+00016698       __wcpp_2_call_unexpected__
+Module: /usr/lib/clib3r.lib(stjmp386)
+0001669e*      _setjmp_
+000166d3       longjmp_
+Module: /usr/lib/plib3r.lib(allocexc)
+00016758       __wcpp_2_alloc_exc__
+00016899       __wcpp_2_free_exc__
+000168c6       __wcpp_2_pop_exc__
+000168d5       __wcpp_2_push_exc__
+Module: /usr/lib/clib3r.lib(ljmphdl)
+000168e2s      default_handler_
+00019494       ___longjmp_handler
+Module: /usr/lib/clib3r.lib(qnx_glob)
+00019498       _qnx_spawn_options
+Module: /usr/lib/clib3r.lib(_qspawn)
+000168e3       qnx_spawn_
+Module: /usr/lib/clib3r.lib(waitpid)
+0001697e       waitpid_
+Module: /usr/lib/plib3r.lib(stfpbfai)
+00016998       int near streambuf::pbackfail( int )
+Module: /usr/lib/clib3r.lib(memmove)
+0001699e       memmove_
+Module: /usr/lib/plib3r.lib(stfseeko)
+000169ec       long near streambuf::seekoff( long, int, int )
+Module: /usr/lib/plib3r.lib(stfsbuf)
+000169f4       streambuf near * near streambuf::setbuf( char near *, int )
+Module: /usr/lib/math387r.lib(log87e)
+00016a3a       __log87_err_
+Module: /usr/lib/math387r.lib(modf387)
+00016a76       modf_
+Module: /usr/lib/math387r.lib(i64ts386)
+00016a90       __CmpBigInt
+00016aca       __Rnd2Int
+00016b35       __Bin2String
+Module: /usr/lib/math387r.lib(fpow10)
+000190bc       __BigPow10Table
+Module: /usr/lib/clib3r.lib(chipvar)
+000194bc       ___chipbug
+000194bc       __chipbug
+Module: /usr/lib/clib3r.lib(chipd32)
+00016d6f*      __fdiv_fpr
+00017231*      __fdiv_chk
+00017244*      __fdiv_m32
+00017290       __fdiv_m64
+000172dc*      __fdiv_m32r
+00017328*      __fdiv_m64r
+00016c58s      fdiv_main_routine
+0001720bs      __fdivp_sti_st
+0001721es      __fdivrp_sti_st
+Module: /usr/lib/math387r.lib(frexp)
+00017374       frexp_
+Module: /usr/lib/clib3r.lib(chk8087)
+000173e3*      __init_8087_
+000173f0*      _fpreset_
+000173fa       __chk8087_
+Module: /usr/lib/clib3r.lib(_brk)
+00017414       _brk_
+Module: /usr/lib/plib3r.lib(termnate)
+00017430       void near terminate()
+Module: /usr/lib/plib3r.lib(unexpect)
+0001747c       void near unexpected()
+Module: /usr/lib/plib3r.lib(areaexc)
+000194c0       ___EXC_AREA
+Module: /usr/lib/clib3r.lib(__qnx_spawn_len)
+000174b0       __qnx_spawn_len_
+Module: /usr/lib/clib3r.lib(__qnx_spawn)
+000174c9       __qnx_spawn_
+Module: /usr/lib/math387r.lib(math2err)
+000174e2       __math1err_
+000174ec+      __math2err_
+0001a4c0s      _MathFuncNames
+Module: /usr/lib/clib3r.lib(chipbug)
+000175c7       verify_pentium_fdiv_bug_
+0001a53cs      ___anon42
+Module: /usr/lib/clib3r.lib(8087cw)
+0001a51c       __8087cw
+Module: /usr/lib/clib3r.lib(ini87386)
+0001761c       __init_80x87
+Module: /usr/lib/clib3r.lib(osinf386)
+0001a79c       ___87
+0001a79d       ___r87
+0001a79e       __osmajor
+0001a79f       __osminor
+Module: /usr/lib/clib3r.lib(hugeval)
+0001910c       __HugeValue
+Module: /usr/lib/math387r.lib(_matherr)
+00017644*      _set_matherr_
+0001764a+      __rterrmsg_
+00017692       _matherr_
+00019114s      _Msgs
+0001a520+      __RWD_matherr
+Module: /usr/lib/clib3r.lib(detosinf)
+000176c1       __DetOSInfo_
+Module: /usr/lib/math387r.lib(__mtherr)
+0001775e       __matherr
+Module: /usr/lib/clib3r.lib(qnx_osinfo)
+00017763       qnx_osinfo_
+Module: /usr/lib/math387r.lib(matherr)
+0001777c+      matherr_
+Module: /usr/lib/plib3r.lib(stfsetb)
+00017780       void near streambuf::setb( char near *, char near *, int )
+Module: /usr/lib/plib3r.lib(flfclose)
+000177d8       filebuf near * near filebuf::close()
+Module: /usr/lib/plib3r.lib(flfopen)
+00017814       filebuf near * near filebuf::open( char const near *, int, int )
+Module: /usr/lib/plib3r.lib(flfconde)
+000178a8       near filebuf::filebuf()
+Module: /usr/lib/plib3r.lib(fsbconde)
+000178bc       near fstreambase::fstreambase()
+Module: /usr/lib/plib3r.lib(ostdlshf)
+00017914       ostream near & near ostream::do_lshift( char )
+Module: /usr/lib/plib3r.lib(ostconde)
+0001794c       near ostream::ostream()
+Module: /usr/lib/plib3r.lib(istdread)
+00017984       istream near & near istream::do_read( char near *, int )
+Module: /usr/lib/plib3r.lib(istdrshf)
+00017a10       istream near & near istream::do_rshift( char near & )
+Module: /usr/lib/plib3r.lib(istdoget)
+00017a64       istream near & near istream::do_get( char near & )
+Module: /usr/lib/plib3r.lib(istconde)
+00017ac8       near istream::istream()
+Module: /usr/lib/plib3r.lib(istpeek)
+00017b14       int near istream::peek()
+Module: /usr/lib/plib3r.lib(istget)
+00017b68       int near istream::get()
+Module: /usr/lib/plib3r.lib(stfsync)
+00017be0       int near streambuf::sync()
+Module: /usr/lib/plib3r.lib(stfdspun)
+00017c18       int near streambuf::do_sputn( char const near *, int )
+Module: /usr/lib/plib3r.lib(stfdsgtn)
+00017cc0       int near streambuf::do_sgetn( char near *, int )
+Module: /usr/lib/clib3r.lib(plusopen)
+00017d3b       __plusplus_open_
+Module: /usr/lib/clib3r.lib(stat)
+00017db5+      stat_
+Module: /usr/lib/plib3r.lib(stfconde)
+00017dd0       near streambuf::streambuf()
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+/usr/lib/clib3r.lib
+/usr/lib/mqueue3r.lib
+/usr/lib/plib3r.lib
+/usr/lib/math387r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  8000 (32768.)
+Memory size:  000185ba (99770.)
+Entry point address: 00010e8c
+Link time: 00:00.90
